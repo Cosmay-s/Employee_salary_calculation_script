@@ -1,0 +1,2 @@
+# Employee_salary_calculation_script
+Скрипт подсчёта зарплаты сотрудников
