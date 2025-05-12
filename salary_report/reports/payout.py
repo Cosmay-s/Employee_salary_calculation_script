@@ -95,7 +95,7 @@ class PayoutReport:
             with open(filepath, 'w', encoding='utf-8') as json_file:
                 json.dump(report_data, json_file, ensure_ascii=False, indent=4)
 
-            logger.info(f"Отчет успешно сохранен в файл: {filepath}")
+            logger.info("Отчет успешно сохранен в файл: %s", filepath)
         except Exception as e:
             logger.exception("Ошибка при сохранении JSON-отчета: %s", str(e))
             return {"error": "Ошибка при сохранении JSON отчета."}
