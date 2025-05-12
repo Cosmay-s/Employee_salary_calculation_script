@@ -3,14 +3,21 @@ import argparse
 from salary_report.cvs_reader import read_employee_data
 from salary_report.reports.payout import PayoutReport
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    encoding="utf-8"
+)
+
 logger = logging.getLogger(__name__)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Генерация отчета по зарплатам сотрудников")
-    parser.add_argument("files", nargs="+", help="Пути к CSV-файлам")
-    parser.add_argument("--report", required=True, help="Тип отчета (только 'payout' поддерживается)")
-    parser.add_argument("--output", required=False, help="Файл для сохранения отчета в формате JSON")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("files", nargs="+")
+    parser.add_argument("--report", required=True)
+    parser.add_argument("--output", required=False)
 
     args = parser.parse_args()
 
@@ -26,14 +33,13 @@ def main():
     report = PayoutReport()
     report.create_payout_report(all_employees)
 
+    print(report)
+
     if args.output:
+        logger.info("Сохранение отчета в файл: %s", args.output)
         result = report.save_report_as_json(args.output)
         if result and "error" in result:
             logger.error("Ошибка при сохранении отчета: %s", result["error"])
-        else:
-            logger.info("Отчет успешно сохранен в файл: %s", args.output)
-    else:
-        print(report)
 
 
 if __name__ == "__main__":
