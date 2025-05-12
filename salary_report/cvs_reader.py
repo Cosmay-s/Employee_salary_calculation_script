@@ -36,8 +36,9 @@ def parse_employee_data(headers: List[str],
                           str(e))
         return None
 
+
 def read_employee_data(filepath: str) -> List[Employee]:
-    employees = []
+    employees: list = []
     try:
         with open(filepath, "r", encoding="utf-8") as file:
             lines = file.readlines()
@@ -56,6 +57,6 @@ def read_employee_data(filepath: str) -> List[Employee]:
 
     except Exception as e:
         logger.exception("Ошибка при чтении файла %s. Ошибка: %s",
-                          filepath, str(e))
-    
+                         filepath, str(e))
+
     return employees
