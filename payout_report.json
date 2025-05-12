@@ -1,0 +1,86 @@
+{
+    "departments": [
+        {
+            "department_name": "Marketing",
+            "employees": [
+                {
+                    "name": "Alice Johnson",
+                    "worked_hours": 160,
+                    "hourly_rate": 50,
+                    "payout": 8000
+                },
+                {
+                    "name": "Henry Martin",
+                    "worked_hours": 150,
+                    "hourly_rate": 35,
+                    "payout": 5250
+                }
+            ],
+            "total_hours": 310,
+            "total_payout": 13250
+        },
+        {
+            "department_name": "Design",
+            "employees": [
+                {
+                    "name": "Bob Smith",
+                    "worked_hours": 150,
+                    "hourly_rate": 40,
+                    "payout": 6000
+                },
+                {
+                    "name": "Carol Williams",
+                    "worked_hours": 170,
+                    "hourly_rate": 60,
+                    "payout": 10200
+                }
+            ],
+            "total_hours": 320,
+            "total_payout": 16200
+        },
+        {
+            "department_name": "HR",
+            "employees": [
+                {
+                    "name": "Grace Lee",
+                    "worked_hours": 160,
+                    "hourly_rate": 45,
+                    "payout": 7200
+                },
+                {
+                    "name": "Ivy Clark",
+                    "worked_hours": 158,
+                    "hourly_rate": 38,
+                    "payout": 6004
+                },
+                {
+                    "name": "Liam Harris",
+                    "worked_hours": 155,
+                    "hourly_rate": 42,
+                    "payout": 6510
+                }
+            ],
+            "total_hours": 473,
+            "total_payout": 19714
+        },
+        {
+            "department_name": "Sales",
+            "employees": [
+                {
+                    "name": "Karen White",
+                    "worked_hours": 165,
+                    "hourly_rate": 50,
+                    "payout": 8250
+                },
+                {
+                    "name": "Mia Young",
+                    "worked_hours": 160,
+                    "hourly_rate": 37,
+                    "payout": 5920
+                }
+            ],
+            "total_hours": 325,
+            "total_payout": 14170
+        }
+    ]
+}
